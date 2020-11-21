@@ -33,8 +33,8 @@ public class CommandThread extends Thread {
             return;
         }
 
-        while (data.isActive()) {
-            logger.info("Started CommandRunner while loop !");
+        if (data.isActive()) {
+            logger.info("Started CommandRunner !");
             List<Command> commands = decoder.decode(data.getText());
 
             commands.forEach(Command::execute);
