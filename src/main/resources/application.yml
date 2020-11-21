@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+morse:
+  short: 1
+  long: 3
+  pause: 1
+
+gpio:
+  pinName: "GPIO 1"

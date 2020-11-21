@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "morse.short",
+      "type": "java.lang.Double",
+      "description": "Description for morse.short."
+    },
+    {
+      "name": "morse.long",
+      "type": "java.lang.Double",
+      "description": "Description for morse.long."
+    },
+    {
+      "name": "morse.pause",
+      "type": "java.lang.Double",
+      "description": "Description for morse.pause."
+    },
+    {
+      "name": "gpio.pinName",
+      "type": "java.lang.String",
+      "description": "Description for gpio.pinName."
+    }
+  ]
+}
