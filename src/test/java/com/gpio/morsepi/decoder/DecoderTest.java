@@ -13,8 +13,8 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@SpringBootTest()
-class DecoderSpec {
+@SpringBootTest
+class DecoderTest {
 
     @Autowired
     Decoder decoder;
@@ -64,6 +64,7 @@ class DecoderSpec {
         assertTrue(commands.get(24) instanceof CommandG);
         assertTrue(commands.get(25) instanceof CommandBetweenLetter);
         assertTrue(commands.get(26) instanceof CommandE);
+        assertTrue(commands.get(27) instanceof CommandEndMessage);
 
     }
 }
