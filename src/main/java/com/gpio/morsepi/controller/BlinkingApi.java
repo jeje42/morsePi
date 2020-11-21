@@ -39,7 +39,7 @@ public class BlinkingApi {
             } else {
                 startUpRunner.setData(Data.builder()
                         .active(false)
-                        .text("")
+                        .text(getData().getText())
                         .build());
             }
         } else if (active == null) {
