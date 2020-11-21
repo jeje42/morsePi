@@ -118,6 +118,10 @@ public class Decoder {
                             toReturn.add(new CommandBetweenLetter(gpioWrapper));
                         }
                     }
+
+                    if (i == commands.size() - 1) {
+                        toReturn.add(new CommandEndMessage(gpioWrapper));
+                    }
                 });
 
         return toReturn;
