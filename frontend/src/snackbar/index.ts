@@ -1,2 +1,2 @@
-export {SuccessSnackbar} from './Success'
-export {ErrorSnackbar} from './Error'
+export { SuccessSnackbar } from './Success';
+export { ErrorSnackbar } from './Error';

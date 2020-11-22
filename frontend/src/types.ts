@@ -1,4 +1,4 @@
 export interface MorsePiSettings {
-    active: boolean,
-    text: string
+  active: boolean;
+  text: string;
 }

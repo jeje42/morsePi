@@ -1,44 +1,47 @@
 import React from 'react';
 import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert, {AlertProps} from '@material-ui/lab/Alert';
-import {makeStyles, Theme} from '@material-ui/core/styles';
+import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 
 function Alert(props: AlertProps) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
-    root: {
-        width: '100%',
-        '& > * + *': {
-            marginTop: theme.spacing(2),
-        },
+  root: {
+    width: '100%',
+    '& > * + *': {
+      marginTop: theme.spacing(2),
     },
+  },
 }));
 
 interface SuccessSnackbarProps {
-    open: boolean,
-    onClose: VoidFunction
+  open: boolean;
+  onClose: VoidFunction;
 }
 
-export const SuccessSnackbar: React.FC<SuccessSnackbarProps> = ({open, onClose}) => {
-    const classes = useStyles();
+export const SuccessSnackbar: React.FC<SuccessSnackbarProps> = ({
+  open,
+  onClose,
+}) => {
+  const classes = useStyles();
 
-    const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
-        if (reason === 'clickaway') {
-            return;
-        }
+  const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
 
-        onClose();
-    };
+    onClose();
+  };
 
-    return (
-        <div className={classes.root}>
-            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-                <Alert onClose={handleClose} severity="success">
-                    Settings saved!
-                </Alert>
-            </Snackbar>
-        </div>
-    );
-}
+  return (
+    <div className={classes.root}>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          Settings saved!
+        </Alert>
+      </Snackbar>
+    </div>
+  );
+};
