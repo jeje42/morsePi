@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/blink")
+@RequestMapping("/api/blink")
 public class BlinkingApi {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());

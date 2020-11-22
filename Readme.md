@@ -1,5 +1,4 @@
-MorsePi
--
+# MorsePi
 
 This is a light project to command light messages from a GPIO capable device. Tested from a raspberry pi.
 

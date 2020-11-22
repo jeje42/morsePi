@@ -8,3 +8,8 @@ morse:
 
 gpio:
   pinName: "GPIO 1"
+
+spring:
+  data:
+    rest:
+      base-uri: api
